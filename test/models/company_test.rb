@@ -58,9 +58,9 @@ class CompanyTest < ActiveSupport::TestCase
   end
 
   def check_assumed_length(attr, length)
-    @company[attr] = 'a' * length
+    @company[attr] = '1' * length
     assert @company.valid?
-    @company[attr] = 'a' * ( length + 1 )
+    @company[attr] = '1' * ( length + 1 )
     assert @company.invalid?
   end
 

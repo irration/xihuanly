@@ -14,18 +14,18 @@
 ActiveRecord::Schema.define(version: 20160301144725) do
 
   create_table "companies", force: :cascade do |t|
-    t.string   "name",                          null: false
-    t.string   "url"
-    t.text     "about"
-    t.text     "vision"
-    t.string   "ceo"
+    t.string   "name",          limit: 30,                  null: false
+    t.string   "url",           limit: 128
+    t.text     "about",         limit: 300
+    t.text     "vision",        limit: 300
+    t.string   "ceo",           limit: 30
     t.integer  "employees"
     t.date     "establishment"
-    t.integer  "postal"
-    t.string   "address"
-    t.boolean  "public",        default: false, null: false
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.string   "postal",        limit: 9
+    t.string   "address",       limit: 256
+    t.boolean  "public",                    default: false, null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
   end
 
 end
