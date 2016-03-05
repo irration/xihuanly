@@ -8,7 +8,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :ceo
       t.integer :employees
       t.date :establishment
-      t.integer :postal
+      t.string :postal
       t.string :address
       t.boolean :public, null: false, default: false
 
